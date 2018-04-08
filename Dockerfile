@@ -47,4 +47,4 @@ fi; \
 done && \
 echo "${CP}" > /tmp/JARLIST
 			    
-ENTRYPOINT ["${JAVA} -cp \"$(/bin/cat /tmp/JARLIST)\" ${JAVAOPTS} net.i2p.router.RouterLaunch "]
+ENTRYPOINT ${JAVA} -cp "$(/bin/cat /tmp/JARLIST)" ${JAVAOPTS} net.i2p.router.RouterLaunch
